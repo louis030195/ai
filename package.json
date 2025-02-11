@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ai-repo",
+  "name": "ai",
   "scripts": {
     "build": "turbo build",
     "changeset": "changeset",
