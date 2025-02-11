@@ -71,6 +71,7 @@ export function convertToOpenAIChatMessages({
                 };
               }
               case 'file': {
+                
                 if (part.data instanceof URL) {
                   throw new UnsupportedFunctionalityError({
                     functionality:
@@ -90,6 +91,11 @@ export function convertToOpenAIChatMessages({
                     return {
                       type: 'input_audio',
                       input_audio: { data: part.data, format: 'mp3' },
+                    };
+                  }
+                  case 'video/mp4': {
+                    return {
+                      type: 'text', text: part.text 
                     };
                   }
 
